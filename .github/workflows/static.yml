@@ -55,7 +55,7 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
-        - name: Make the script files executable
+      - name: Make the script files executable
         run: chmod +x ./.github/scripts/telegram.sh
       - name: Conclusion
         id: conclusion
@@ -71,4 +71,3 @@ jobs:
           GITHUB_SERVER_URL: ${{ secrets.GITHUB_SERVER_URL }}
           GITHUB_RUN_ID: ${{ secrets.GITHUB_RUN_ID }}
           STATUS: ${{ job.status }}
-
